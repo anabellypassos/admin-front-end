@@ -68,23 +68,28 @@ export default function Products() {
         }
     };
 
-    return (
-        <div className="p-8">
-<div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
-  <div>
-    <h1 className="text-2xl md:text-3xl font-bold text-slate-800">Estoque</h1>
-    <p className="text-slate-500 text-sm">Gerencie seus itens</p>
-  </div>
-  <button onClick={() => setIsModalOpen(true)} className="w-full sm:w-auto bg-blue-600 text-white px-5 py-3 rounded-xl flex justify-center items-center gap-2">
-    <PackagePlus size={20} /> Novo Produto
-  </button>
-</div>
+  return (
+        <div className="p-4 md:p-8"> {/* Padding ajustado */}
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+                <div>
+                    <h1 className="text-2xl md:text-3xl font-bold text-slate-800">Estoque</h1>
+                    <p className="text-slate-500 text-sm">Gerencie os itens do seu catálogo</p>
+                </div>
+                <button 
+                  onClick={() => setIsModalOpen(true)} 
+                  className="w-full sm:w-auto bg-blue-600 text-white px-5 py-3 rounded-xl flex justify-center items-center gap-2 hover:bg-blue-700 transition shadow-md active:scale-95"
+                >
+                    <PackagePlus size={20} /> 
+                    <span className="font-semibold">Novo Produto</span>
+                </button>
+            </div>
 
-<div className="w-full overflow-x-auto bg-white rounded-xl shadow-sm border border-slate-200">
-                <table className="w-full text-left">
+            {/* Tabela com Scroll Lateral */}
+            <div className="w-full overflow-x-auto bg-white rounded-2xl shadow-sm border border-slate-200">
+                <table className="w-full text-left min-w-[700px]">
                     <thead className="bg-gray-50 border-b">
                         <tr className="text-slate-500 text-xs uppercase font-bold tracking-wider">
-                            <th className="p-4">Foto</th>
+                            <th className="p-4 w-24">Foto</th>
                             <th className="p-4">Nome</th>
                             <th className="p-4">Preço</th>
                             <th className="p-4 text-center">Qtd</th>

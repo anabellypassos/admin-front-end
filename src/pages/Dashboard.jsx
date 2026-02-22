@@ -15,11 +15,11 @@ export default function Dashboard() {
     <div className="p-8 bg-gray-50 min-h-screen">
       <h1 className="text-3xl font-bold mb-8">Dashboard</h1>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <StatCard icon={<Users />} title="Usuários" value={stats.totalUsers} color="bg-blue-500" />
-        <StatCard icon={<Package />} title="Produtos" value={stats.totalProducts} color="bg-green-500" />
-        <StatCard icon={<DollarSign />} title="Valor Estoque" value={`R$ ${stats.totalValue.toFixed(2)}`} color="bg-purple-500" />
-      </div>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+  <StatCard icon={<Users />} title="Usuários" value={stats.totalUsers} color="bg-blue-500" />
+  <StatCard icon={<Package />} title="Produtos" value={stats.totalProducts} color="bg-green-500" />
+  <StatCard icon={<DollarSign />} title="Estoque" value={`R$ ${stats.totalValue.toFixed(2)}`} color="bg-purple-500" />
+</div>
     </div>
   );
 }

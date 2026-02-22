@@ -70,17 +70,17 @@ export default function Products() {
 
     return (
         <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
-                <div>
-                    <h1 className="text-3xl font-bold text-slate-800">Estoque</h1>
-                    <p className="text-slate-500 text-sm">Gerencie os itens do seu catálogo</p>
-                </div>
-                <button onClick={() => setIsModalOpen(true)} className="bg-blue-600 text-white px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-700 transition shadow-md">
-                    <PackagePlus size={20} /> Novo Produto
-                </button>
-            </div>
+<div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+  <div>
+    <h1 className="text-2xl md:text-3xl font-bold text-slate-800">Estoque</h1>
+    <p className="text-slate-500 text-sm">Gerencie seus itens</p>
+  </div>
+  <button onClick={() => setIsModalOpen(true)} className="w-full sm:w-auto bg-blue-600 text-white px-5 py-3 rounded-xl flex justify-center items-center gap-2">
+    <PackagePlus size={20} /> Novo Produto
+  </button>
+</div>
 
-            <div className="bg-white rounded-xl shadow-sm border overflow-hidden">
+<div className="w-full overflow-x-auto bg-white rounded-xl shadow-sm border border-slate-200">
                 <table className="w-full text-left">
                     <thead className="bg-gray-50 border-b">
                         <tr className="text-slate-500 text-xs uppercase font-bold tracking-wider">

@@ -1,10 +1,9 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: 'https://admin-dashboard-backend-uj3j.onrender.com/api', 
 });
 
-// Adiciona o token em todas as requisições automaticamente
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
   if (token) {
@@ -13,4 +12,4 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-export default api
+export default api;
